@@ -304,9 +304,12 @@ body {
   transition: 0.3s;
 }
 
-.option-list .option:hover {
+.option-list .option:hover:not([disabled]) {
   background: rgba(255, 255, 255, 0.1);
   border-color: rgba(255, 255, 255, 0.1);
+}
+.option:disabled{
+  cursor: no-drop;
 }
 
 .option-list .option.correct {
@@ -390,8 +393,8 @@ body {
   transform: translate(-50%, -50%) scale(1);
 }
 
-.result-box h2 {
-  font-size: 52px;
+.result-box h3 {
+  font-size: 50px;
 }
 
 .result-box .percentage-container {
@@ -467,4 +470,12 @@ body {
 .buttons button:nth-child(2):hover {
   background: transparent;
   color: white;
+}
+
+.correct{
+  background: #07f232;
+}
+
+.incorrect{
+  background: #e02633;
 }

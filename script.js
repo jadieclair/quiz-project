@@ -42,24 +42,25 @@ continueBtn.onclick = () => {
 
 
 
+
+
 // please place quiz code above this
 // result progress
 
-// const circularProgress = document.querySelector('.circular-progress');
-// const progressValue = document.querySelector('.progress-value');
-// let progressStartValue = -1;
-// let progressEndValue = (userScore / questions.length) * 100;
-// let speed = 20;
+const circularProgress = document.querySelector('.circular-progress');
+const progressValue = document.querySelector('.progress-value');
+let progressStartValue = -1;
+let progressEndValue = (userScore / questions.length) * 100;
+let speed = 20;
 
-// let progress = setInterval(() => {
-//   progressStartValue++;
+let progress = setInterval(() => {
+  progressStartValue++;
 
-//   // console.log(progressStartValue);
-//   progressValue.textContent = `${progressStartValue}%` ;
-//   circularProgress.style.background = `conic-gradient( 
-//     #c40094 ${progressStartValue * 3.6}deg, rgba(255, 255, 255, 1) 0deg';
+  // console.log(progressStartValue);
+  progressValue.textContent = `${progressStartValue}%`;
+  circularProgress.style.background = `conic-gradient(#c40094 ${progressStartValue * 3.6}deg, rgba(255, 255, 255, 1) 0deg)`;
 
-//   if (progressStartValue == progressEndValue) {
-//     clearInterval(progress);
-//   }
-// }, speed);
+  if (progressStartValue === progressEndValue) {
+    clearInterval(progress);
+  }
+}, speed);
