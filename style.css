@@ -1,28 +1,28 @@
-/* Reset styles */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
 
 body {
   color: #fff;
-  background: #000;
-  font-family: "Poppins", sans-serif;
+  background: #09001d;
   overflow: hidden;
 }
 
-/* Header styles */
 .header {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  padding: 20px;
+  padding: 20px 10%;
   background: transparent;
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
+  align-items: right;
   z-index: 100;
 }
 
@@ -40,26 +40,14 @@ body {
   transition: 0.3s;
 }
 
-.navbar a:hover {
+.navbar a:hover,
+.navbar a.active {
   color: orange;
 }
 
-.droplist {
-  position: absolute;
-  /* background: red; */
-  width: 100%;
-  box-shadow: 1px 1px 2px;
-  top: 75px;
-  left: 0;
-  list-style: none;
-  transition: all 0.5s ease;
-  cursor: pointer;
-}
-
-/* Main content styles */
 .main {
   min-height: 100vh;
-  background: url("./images/quizbg.jpg") no-repeat;
+  background: url("images/quizbg.jpg") no-repeat;
   background-size: cover;
   background-position: top left;
   pointer-events: auto;
@@ -68,9 +56,9 @@ body {
 }
 
 @keyframes mymove {
-  50% {
+  /* 50% {
     filter: hue-rotate(360deg);
-  }
+  } */
   50% {
     background-position: center;
   }
@@ -87,7 +75,6 @@ body {
   width: 200%;
 }
 
-/* Home section styles */
 .home {
   position: relative;
   left: -50%;
@@ -121,7 +108,7 @@ body {
 .home-content .start-btn {
   width: 190px;
   height: 55px;
-  background: rgb(238, 157, 5);
+  background: orange;
   border: 2px solid #fff;
   outline: none;
   border-radius: 6px;
@@ -131,14 +118,14 @@ body {
   letter-spacing: 1px;
   font-weight: 600;
   cursor: pointer;
+  transition: 0.5s;
 }
 
 .home-content .start-btn:hover {
-  background: #2c2c2c;
+  background: #09001d;
   box-shadow: none;
 }
 
-/* Popup Info styles */
 .popup-info {
   position: absolute;
   top: 50%;
@@ -161,12 +148,11 @@ body {
 
 .popup-info h2 {
   font-size: 50px;
-  text-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
-  filter: drop-shadow(0 0 5px orange);
+  color: orangered;
 }
 
 .popup-info .info {
-  display: block;
+  display: inline-block;
   font-size: 16px;
   color: #333;
   font-weight: 500;
@@ -188,8 +174,8 @@ body {
   align-items: center;
   width: 130px;
   height: 45px;
-  background: linear-gradient(orange, red);
-  border: 1px solid black;
+  background: orangered;
+  border: 2px solid orange;
   outline: none;
   border-radius: 6px;
   text-decoration: none;
@@ -203,27 +189,24 @@ body {
 
 .popup-info .btn-group .info-btn:nth-child(1) {
   background: transparent;
-  color: black;
+  color: orangered;
 }
 
 .popup-info .btn-group .info-btn:nth-child(1):hover {
-  background: linear-gradient(orange, red);
-  transition: 0.5s;
-  color: black;
+  background: orangered;
+  color: #fff;
 }
 
 .popup-info .btn-group .info-btn:nth-child(2):hover {
-  background: linear-gradient(orange, red);
-  transition: 0.5s;
-  color: black;
+  background: orange;
+  border-color: orange;
 }
 
-/* Quiz section styles */
 .quiz-section {
   position: relative;
   left: -50%;
   width: 100%;
-  background: #181818;
+  background: #09001d;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -263,7 +246,15 @@ body {
 .quiz-box h1 {
   font-size: 32px;
   text-align: center;
-  background: linear-gradient(45deg, transparent, orangered, transparent);
+  background: linear-gradient(
+    45deg,
+    transparent,
+    orange,
+    transparent,
+    orangered,
+    transparent,
+    yellow
+  );
   border-radius: 6px;
 }
 
@@ -282,7 +273,7 @@ body {
 }
 
 .quiz-header .header-score {
-  background: orange;
+  background: orangered;
   border-radius: 3px;
   padding: 7px;
 }
@@ -311,14 +302,14 @@ body {
 
 .option-list .option.correct {
   background: #09001d;
-  color: green;
-  border-color: green;
+  color: #00a63d;
+  border-color: #00a63d;
 }
 
 .option-list .option.incorrect {
   background: #09001d;
-  color: red;
-  border-color: red;
+  color: #a60045;
+  border-color: #a60045;
 }
 
 .option-list .option.disabled {
@@ -329,12 +320,12 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-top: 2px solid orange;
+  border-top: 2px solid yellow;
   padding-top: 20px;
   margin-top: 25px;
 }
 
-.quiz-footer .quiz-total {
+.quiz-footer .question-total {
   font-size: 16px;
   font-weight: 600;
 }
@@ -350,20 +341,20 @@ body {
   color: rgba(255, 255, 255, 0.3);
   font-weight: 600;
   cursor: pointer;
-  /* pointer-events: none; */
+  pointer-events: none;
   transition: 0.5s;
 }
 
 .quiz-footer .next-btn.active {
   pointer-events: auto;
-  background: #4f13d0;
-  border-color: #4f13d0;
+  background: orangered;
+  border-color: orange;
   color: #fff;
 }
 
 .quiz-footer .next-btn.active:hover {
-  background: #c40094;
-  border-color: #c40094;
+  background: orangered;
+  border-color: orange;
 }
 
 .quiz-section .result-box {
@@ -373,9 +364,9 @@ body {
   transform: translate(-50%, -50%) scale(0.9);
   width: 500px;
   background: transparent;
-  border: 2px solid #c40094;
+  border: 2px solid orange;
   border-radius: 6px;
-  padding: 20x;
+  padding: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -396,7 +387,6 @@ body {
 
 .result-box .percentage-container {
   width: 300px;
-
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -407,7 +397,7 @@ body {
   position: relative;
   width: 250px;
   height: 250px;
-  background: conic-gradient(orange, 0.6deg, rgba(255, 255, 255, 0.1) 0deg);
+  background: conic-gradient(#c40094 3.6deg, rgba(255, 255, 255, 0.1) 0deg);
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -442,8 +432,8 @@ body {
 .buttons button {
   width: 130px;
   height: 47px;
-  background: #c40094;
-  border: 2px solid #c40094;
+  background: orangered;
+  border: 2px solid orange;
   outline: none;
   border-radius: 6px;
   font-size: 16px;
@@ -451,20 +441,20 @@ body {
   font-weight: 600;
   margin: 0 20px 20px;
   cursor: pointer;
-  transition: 5s;
+  transition: 0.5s;
 }
 
 .buttons button:nth-child(1):hover {
-  background: #c40094;
-  border-color: #c40094;
+  background: orangered;
+  border-color: orange;
 }
 
 .buttons button:nth-child(2) {
   background: transparent;
-  color: #c40094;
+  color: orange;
 }
 
 .buttons button:nth-child(2):hover {
-  background: transparent;
-  color: white;
+  background: orange;
+  color: #fff;
 }
