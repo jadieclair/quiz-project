@@ -73,10 +73,10 @@ body {
   }
 }
 
-.main.active {
-  /* Applied when the quiz section is active */
-  filter: blur(15px);
-  pointer-events: none;
+.quiz-section.active .main {
+  /* Apply the blur effect when the quiz section is active */
+  /* filter: blur(25px);
+  pointer-events: none; */
 }
 
 /* Container Styling */
