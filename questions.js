@@ -1,106 +1,118 @@
-// Array of Quiz Questions
 const questions = [
   {
     numb: 1,
-    question:
-      "Which CSS property is used to control the space between the content and the border of an element?",
-    answer: "C. Padding",
+    question: "What does HTML stand for?",
+    answer: "C. Hyper Text Markup Language",
     options: [
-      "A. Margin",
-      "B. Border-Spacing",
-      "C. Padding", // Correct Answer
-      "D. Add border"
+      "A. Hyper Type Multi Language",
+      "B. Hyper Text Multiple Language",
+      "C. Hyper Text Markup Language",
+      "D. Home Text Multi Language",
     ],
   },
   {
     numb: 2,
     question:
-      "In HTML, what is the correct way to create a checkbox input element?",
-    answer: "A. <input type='checkbox'>", // Correct Answer
+      "What is the correct way to declare a variable in JavaScript?",
+    answer: "D. const variableName = value;", // Correct Answer
     options: [
-      "A. <input type='checkbox'>",
-      "B. <input type='check'>",
-      "C. <check type='input'>",
-      "D. <input type='checkBox'>"
+      "A. variableName = value;",
+      "B. var variableName = value;",
+      "C. let variableName = value;",
+      "D. const variableName = value;",
     ],
   },
   {
     numb: 3,
-    question: "What is the Spread syntax?",
-    answer: "C. (...) - Spread Operator", // Correct Answer
-    options: ["A. (/..)", "B. (../)", "C. (...)" "D. (.**)"],
+    question:
+      "Which property is used to change the text color of an element?",
+    answer: "C. color", // Correct Answer
+    options: [
+      "A. text-color",
+      "B. font-color",
+      "C. color",
+      "D. text-style",
+    ],
   },
   {
     numb: 4,
-    question:
-      "In JavaScript, what is the purpose of the 'addEventListener' method?",
-    answer: "B. To attach a function to an HTML element for a specified event", // Correct Answer
+    question: "What does CSS stand for?",
+    answer: "A. Cascading Style Sheet",
     options: [
-      "A. To create a new element in the DOM",
-      "B. To attach a function to an HTML element for a specified event",
-      "C. To add a new event to the browser's event list",
-      "D. To attach a function to an CSS element"
+      "A. Cascading Style Sheet",
+      "B. Cute Style Sheet",
+      "C. Computer Style Sheet",
+      "D. Continued Style Sheet",
+    ],
   },
   {
     numb: 5,
-    question: "What are the differences between var, let, and const?",
-    answer: "B. var is scoped to a function. let and const are block-scoped.", // Correct Answer
+    question: "What does PHP stand for?",
+    answer: "A. Hypertext Preprocessor",
     options: [
-      "A. let and const are scoped to a function. var is block-scoped.",
-      "B. var is scoped to a function. let and const are block-scoped.",
-      "C. None of the above",
-      "D. All of the above"
+      "A. Hypertext Preprocessor",
+      "B. Hometext Programming",
+      "C. Hypertext Preprogramming",
+      "D. Programming Hypertext Preprocessor",
     ],
   },
   {
     numb: 6,
-    question: "How do you create a new array in JavaScript?",
-    answer: "A. [ ]", // Correct Answer
-    options: ["A. [ ]", "B. new Array()", "C. Array.create()" "D. {}"],
-  },
-  {
-    numb: 7,
-    question: "In CSS, which property is used to create a flexible grid container with multiple rows and columns?",
-    answer: "D. Grid-template", // Correct Answer
+    question:
+      "What CSS property controls space between the content and border of an element?",
+    answer: "C. Padding",
     options: [
-      "A. grid-gap",
-      "B. grid-area",
-      "C. grid-column",
-      "D. Grid-template"
+      "A. Margin",
+      "B. Border-Spacing",
+      "C. Padding", // Correct Answer
+      "D. Add border",
     ],
   },
   {
-    numb: 8,
-    question:
-      "What method is used to add a new element to the end of an array in JavaScript?",
-    answer: "B. push()", // Correct Answer
-    options: ["A. append()", "B. push()", "C. add()" "D. pop()"],
-  },
-  {
-    numb: 9,
+    numb: 7,
     question: "How do you center an element horizontally in CSS?",
     answer: "C. text-align: center;", // Correct Answer
     options: [
       "A. position: center;",
       "B. text-align: center",
       "C. text-align: center;",
-      "D. Justify-content: center"
+      "D. Justify-content: center",
+    ],
+  },
+  {
+    numb: 8,
+    question: "What does SQL stand for?",
+    answer: "D. Structured Query Language",
+    options: [
+      "A. Strength Query Language",
+      "B. Stylesheet Query Language",
+      "C. Science Question Language",
+      "D. Structured Query Language",
+    ],
+  },
+  {
+    numb: 9,
+    question:
+      "Which of these methods is used to add elements to the end of an array?",
+    answer:
+      "A. .push()", // Correct Answer
+    options: [
+      "A. .push()",
+      "B. .pop()",
+      "C. .shift()",
+      "D. .unshift()",
     ],
   },
   {
     numb: 10,
-    question:
-      "In JavaScript, which of the following options correctly explains the concept of closures?",
-    answer:
-      "C. Closures refer to a function that is defined inside another function and has access to its parent function's variables even after the parent function has completed execution.", // Correct Answer
+    question: "What does XML stand for?",
+    answer: "D. Extensible Markup Language",
     options: [
-      "A. A closure is a data structure used to store key-value pairs.",
-      "B. Closures are a type of JavaScript loop used to iterate over arrays and objects.",
-      "C. Closures refer to a function that is defined inside another function and has access to its parent function's variables even after the parent function has completed execution.",
-      "D. All of the above"
+      "A. Excellent Multiple Language",
+      "B. Explore Multiple Language",
+      "C. Extra Markup Language",
+      "D. Extensible Markup Language",
     ],
   },
-  // Add more questions here if needed
 ];
 
-// Quiz questions array with comments and corrections
