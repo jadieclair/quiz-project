@@ -1,5 +1,9 @@
+/* CSS styles for the quiz application */
+
+/* Font Import */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
 
+/* Global Reset and Styling */
 * {
   margin: 0;
   padding: 0;
@@ -13,6 +17,7 @@ body {
   overflow: hidden;
 }
 
+/* Header Styling */
 .header {
   position: fixed;
   top: 0;
@@ -26,12 +31,12 @@ body {
   z-index: 100;
 }
 
-.logo {
+.header .logo {
   width: 100px;
   filter: drop-shadow(0 0 5px orange);
 }
 
-.navbar a {
+.header .navbar a {
   font-size: 18px;
   color: #fff;
   text-decoration: none;
@@ -40,11 +45,12 @@ body {
   transition: 0.3s;
 }
 
-.navbar a:hover,
-.navbar a.active {
+.header .navbar a:hover,
+.header .navbar a.active {
   color: orange;
 }
 
+/* Main Section Styling */
 .main {
   min-height: 100vh;
   background: url("images/quizbg.jpg") no-repeat;
@@ -52,29 +58,35 @@ body {
   background-position: top left;
   pointer-events: auto;
   transition: 0.3s ease;
+}
+
+.hue {
   animation: mymove 5s infinite;
 }
 
 @keyframes mymove {
-  /* 50% {
-    filter: hue-rotate(360deg);
-  } */
+  80% {
+    filter: hue-rotate(40deg);
+  }
   50% {
     background-position: center;
   }
 }
 
 .main.active {
+  /* Applied when the quiz section is active */
   filter: blur(15px);
   pointer-events: none;
 }
 
+/* Container Styling */
 .container {
   display: flex;
   height: 100vh;
   width: 200%;
 }
 
+/* Home Section Styling */
 .home {
   position: relative;
   left: -50%;
@@ -84,28 +96,28 @@ body {
   align-items: center;
 }
 
-.home-content {
+.home .home-content {
   max-width: 600px;
   display: flex;
   align-items: center;
   flex-direction: column;
 }
 
-.home-content h1 {
+.home .home-content h1 {
   font-size: 78px;
   font-weight: 700;
   text-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   filter: drop-shadow(0 0 5px orange);
 }
 
-.home-content p {
+.home .home-content p {
   font-size: 16px;
   text-align: center;
   text-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   margin-bottom: 30px;
 }
 
-.home-content .start-btn {
+.home .home-content .start-btn {
   width: 190px;
   height: 55px;
   background: orange;
@@ -121,11 +133,12 @@ body {
   transition: 0.5s;
 }
 
-.home-content .start-btn:hover {
+.home .home-content .start-btn:hover {
   background: #09001d;
   box-shadow: none;
 }
 
+/* Popup Styling */
 .popup-info {
   position: absolute;
   top: 50%;
@@ -202,6 +215,7 @@ body {
   border-color: orange;
 }
 
+/* Quiz Section Styling */
 .quiz-section {
   position: relative;
   left: -50%;
@@ -267,12 +281,12 @@ body {
   margin-bottom: 30px;
 }
 
-.quiz-header span {
+.quiz-box .quiz-header span {
   font-size: 18px;
   font-weight: 500;
 }
 
-.quiz-header .header-score {
+.quiz-box .quiz-header .header-score {
   background: orangered;
   border-radius: 3px;
   padding: 7px;
@@ -301,15 +315,15 @@ body {
 }
 
 .option-list .option.correct {
-  background: #09001d;
-  color: #00a63d;
+  background: #00a63d;
+  color: #fff;
   border-color: #00a63d;
 }
 
 .option-list .option.incorrect {
-  background: #09001d;
-  color: #a60045;
-  border-color: #a60045;
+  background: red;
+  color: #fff;
+  border-color: red;
 }
 
 .option-list .option.disabled {
@@ -325,12 +339,12 @@ body {
   margin-top: 25px;
 }
 
-.quiz-footer .question-total {
+.quiz-box .quiz-footer .question-total {
   font-size: 16px;
   font-weight: 600;
 }
 
-.quiz-footer .next-btn {
+.quiz-box .quiz-footer .next-btn {
   width: 100px;
   height: 45px;
   background: rgba(255, 255, 255, 0.1);
@@ -345,18 +359,19 @@ body {
   transition: 0.5s;
 }
 
-.quiz-footer .next-btn.active {
+.quiz-box .quiz-footer .next-btn.active {
   pointer-events: auto;
   background: orangered;
   border-color: orange;
   color: #fff;
 }
 
-.quiz-footer .next-btn.active:hover {
+.quiz-box .quiz-footer .next-btn.active:hover {
   background: orangered;
   border-color: orange;
 }
 
+/* Result Box Styling */
 .quiz-section .result-box {
   position: absolute;
   top: 50%;

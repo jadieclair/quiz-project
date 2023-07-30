@@ -13,13 +13,13 @@ let questions = [
   {
     numb: 2,
     question:
-      "In CSS, which property is used to create a flexible grid container with multiple rows and columns?",
-    answer: "D. Grid-template", // Correct Answer
+      "What is the correct syntax to create a new instance of the Date object in JavaScript?",
+    answer: "A. new Date()", // Correct Answer
     options: [
-      "A. grid-gap",
-      "B. grid-area",
-      "C. grid-column",
-      "D. Grid-template",
+      "A. new Date()",
+      "B. Date.new()",
+      "C. create.Date()",
+      "D. Date.create()",
     ],
   },
   {
@@ -42,7 +42,7 @@ let questions = [
       "A. Cascading Style Sheet",
       "B. Cute Style Sheet",
       "C. Computer Style Sheet",
-      "D. Codehal Style Sheet",
+      "D. Continued Style Sheet",
     ],
   },
   {

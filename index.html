@@ -6,14 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Quiz Game</title>
     <link rel="stylesheet" href="style.css" />
+    <!-- Linking the external CSS file -->
   </head>
 
   <body>
-    <main class="main">
+    <main class="main hue">
+      <!-- Header Section -->
       <header class="header">
         <img src="images/logodragon.jpg" class="logo" alt="dragon logo" />
+        <!-- Logo Image -->
 
-        <nav class="navbar">
+        <nav class="navbar hue">
+          <!-- Navigation Links -->
           <a href="#">Home</a>
           <a href="#">About</a>
           <a href="#" class="active">Games</a>
@@ -22,70 +26,97 @@
       </header>
 
       <div class="container">
+        <!-- Quiz Section -->
         <section class="quiz-section">
           <div class="quiz-box">
+            <!-- Quiz Box Content -->
             <h1>Quiz Game</h1>
+            <!-- Title of the quiz -->
             <div class="quiz-header">
+              <!-- Quiz Header Info -->
               <span>Coding Quiz</span>
+              <!-- Category or type of quiz -->
               <span class="header-score">Score: 0 / 10</span>
+              <!-- Current score of the player -->
             </div>
 
             <h2 class="question-text">What does HTML stand for?</h2>
+            <!-- Current question -->
 
             <div class="option-list">
-              <!-- <div class="option">
-                            <span>A. Hyper Type Multi Language</span>
-                        </div>
-                        <div class="option">
-                            <span>B. Hyper Text Multiple Language</span>
-                        </div>
-                        <div class="option">
-                            <span>C. Hyper Text Markup Language</span>
-                        </div>
-                        <div class="option">
-                            <span>D. Home Text Multi Language</span>
-                        </div> -->
+              <!-- Options for the current question -->
+              <!--
+            <div class="option">
+              <span>A. Hyper Type Multi Language</span>
             </div>
+            <div class="option">
+              <span>B. Hyper Text Multiple Language</span>
+            </div>
+            <div class="option">
+              <span>C. Hyper Text Markup Language</span>
+            </div>
+            <div class="option">
+              <span>D. Home Text Multi Language</span>
+            </div>
+            --></div>
 
             <div class="quiz-footer">
+              <!-- Quiz Footer Info -->
               <span class="question-total">1 of 10 Questions</span>
+              <!-- Current question number -->
               <button class="next-btn">Next</button>
+              <!-- Button to proceed to the next question -->
             </div>
           </div>
 
+          <!-- Result Box Section -->
           <div class="result-box">
             <h2>Quiz Result!</h2>
+            <!-- Result title -->
             <div class="percentage-container">
+              <!-- Percentage and Score Display -->
               <div class="circular-progress">
+                <!-- Circular Progress Bar -->
                 <span class="progress-value">0%</span>
+                <!-- Percentage value -->
               </div>
 
               <span class="score-text">You Scored: 0 out of 10</span>
+              <!-- Final score of the player -->
             </div>
 
             <div class="buttons">
+              <!-- Buttons after quiz completion -->
               <button class="tryAgain-btn">Try Again</button>
+              <!-- Button to try the quiz again -->
               <button class="goHome-btn">Go To Home</button>
+              <!-- Button to go back to the home section -->
             </div>
           </div>
         </section>
 
-        <section class="home">
+        <!-- Home Section -->
+        <section class="home hue">
           <div class="home-content">
+            <!-- Home Section Content -->
             <h1>Quiz Game</h1>
+            <!-- Title of the quiz -->
             <p>
               Sharpen your programming skills and compete against fellow coders
               in a thrilling quest through a series of mind-expanding questions
               and coding conundrums.
             </p>
             <button class="start-btn">Start Quiz</button>
+            <!-- Button to start the quiz -->
           </div>
         </section>
       </div>
     </main>
 
+    <!-- Popup Info Section -->
     <div class="popup-info">
       <h2>Quiz Rules</h2>
+      <!-- Popup title -->
       <span class="info"
         >1. No Skipping - Skipping questions is not allowed.</span
       >
@@ -101,11 +132,15 @@
       >
 
       <div class="btn-group">
+        <!-- Buttons in the popup -->
         <button class="info-btn exit-btn">Exit Quiz</button>
+        <!-- Button to exit the quiz -->
         <a href="#" class="info-btn continue-btn">Continue</a>
+        <!-- Button to continue the quiz -->
       </div>
     </div>
 
+    <!-- External JavaScript Files -->
     <script src="questions.js"></script>
     <script src="script.js"></script>
   </body>
